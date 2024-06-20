@@ -1,8 +1,9 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {
-
     public static int[] arr1;
 
     public static void main(String[] args) throws IOException {
@@ -24,10 +25,9 @@ public class Main {
             arr2[i] = Integer.parseInt(st.nextToken());
         }
 
-
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < m; i++) {
-            if (Arrays.binarySearch(arr1, arr2[i]) >= 0) {
+            if (binarySearch(arr2[i]) >= 0) {
                 sb.append(1).append('\n');
             } else {
                 sb.append(0).append('\n');
@@ -35,4 +35,20 @@ public class Main {
         }
         System.out.println(sb);
     }
+    private static int binarySearch(int key) {
+        int left = 0;
+        int right = arr1.length - 1;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (key < arr1[mid]) {
+                right = mid - 1;
+            } else if (key > arr1[mid]) {
+                left = mid + 1;
+            }else {
+                return mid;
+            }
+        }
+        return -1;
+    }
+
 }
