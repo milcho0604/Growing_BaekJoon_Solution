@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         StringBuilder sb = new StringBuilder();
         while (true) {
-            int n = Integer.parseInt(br.readLine().trim());
+            int n = Integer.parseInt(br.readLine());
             if (n == 0) break;
 
             int start = n + 1;
