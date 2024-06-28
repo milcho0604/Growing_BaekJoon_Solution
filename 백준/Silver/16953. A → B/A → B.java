@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
 public class Main {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
+    static boolean[][] visited;
     static int count = 0;
 
     public static void main(String[] args) throws IOException {
@@ -23,7 +24,7 @@ public class Main {
         myQue.offer(start);
         while (!myQue.isEmpty()) {
             count++;
-            // 큐의 크기를 미리 저장
+//            루프 실행 중 큐의 크기가 변경될 수 있기 때문에 미리 size 변수를 선언(myQue.add로직이 있기 때문)
             int size = myQue.size();
             for (int i = 0; i < size; i++) {
                 long now = myQue.poll();
@@ -34,7 +35,7 @@ public class Main {
                 if (now * 2 <= target) {
                     myQue.add(now * 2);
                 }
-                // 오른쪽에 1을 추가하는 연산
+//                맨 오른쪽에 1을 추가하는 연산 *10을 해주고 마지막 값에 1을 추가할 수 있음 그렇지 않으면, char로 변환하거나 하는 골치 아픈 상황 발
                 if (now * 10 + 1 <= target) {
                     myQue.add(now * 10 + 1);
                 }
