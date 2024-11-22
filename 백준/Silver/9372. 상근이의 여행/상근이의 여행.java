@@ -47,7 +47,7 @@ public class Main {
             sb.append(n-1).append("\n");
 
 
-        }//while
+        }
 
         System.out.print(sb);
 
