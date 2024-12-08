@@ -14,9 +14,9 @@ public class Main {
 
 //        String[] spl = br.readLine().split(" ");
         int n = Integer.parseInt(br.readLine()); // 테스트 케이스(도시)
-
-        int[] distance = new int[n - 1]; // 도시마다 거리
-        int[] price = new int[n]; // 각 도시 주유소의 가격
+        
+        long[] distance = new long[n - 1]; // 도시마다 거리
+        long[] price = new long[n]; // 각 도시 주유소의 가격
 
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < n - 1; i++) {
@@ -28,8 +28,8 @@ public class Main {
             price[i] = Integer.parseInt(st.nextToken());
         }
 
-        int sum = 0;
-        int minPrice = price[0];
+        long sum = 0;
+        long minPrice = price[0];
         for (int i = 0; i < n-1; i++) {
             if (price[i] < minPrice) {
                 minPrice = price[i];
