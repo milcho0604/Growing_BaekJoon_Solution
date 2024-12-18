@@ -43,6 +43,7 @@ public class Main {
             }
             countList.add(count);
         }
+        
 //        결과 출력
         for (int count : countList) {
             System.out.println(count);
