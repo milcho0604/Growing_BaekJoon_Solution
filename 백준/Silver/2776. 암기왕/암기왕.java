@@ -10,7 +10,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         int n = Integer.parseInt(br.readLine());
-        
 
         for (int i = 0; i < n; i++) {
             int m = Integer.parseInt(br.readLine());
