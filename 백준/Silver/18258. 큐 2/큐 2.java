@@ -70,6 +70,7 @@ public class Main {
             sb.append(-1).append("\n");
         }
     }
+    
     public  static void back(){
         if (!myQue.isEmpty()) {
             sb.append(myQue.peekLast()).append("\n");
