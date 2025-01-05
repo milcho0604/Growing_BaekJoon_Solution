@@ -9,7 +9,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int n = Integer.parseInt(st.nextToken()); // 고양이 수
+        
+        int n = Integer.parseInt(st.nextToken()); // 고양이
         int k = Integer.parseInt(st.nextToken()); // 버틸 수 있는 무게
 
         int[] weights = new int[n];
