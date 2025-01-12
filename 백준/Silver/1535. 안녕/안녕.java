@@ -12,7 +12,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
-        int health = 100; // 초기 체력 설정
+        int health = 100; // 초기 체력 
         int[] stamina = new int[n]; // 체력 소비량 배열
         int[] happy = new int[n]; // 행복 값 배열
         int[] dp = new int[health + 1];
