@@ -2,7 +2,6 @@ import java.io.*;
 import java.util.*;
 
 class Main {
-    // dfs와 bfs메소드 모두에서 사용하기 위해 static으로 선언
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static boolean[] visit;         // 방문 여부를 파악할 visit 배열
     static int[][] arr;             // 간선의 정보를 저장할 배열
