@@ -7,4 +7,3 @@ from PRODUCT p left join OFFLINE_SALE o
 on p.product_id = o.product_id
 group by product_code
 order by sales desc, product_code asc;
-
