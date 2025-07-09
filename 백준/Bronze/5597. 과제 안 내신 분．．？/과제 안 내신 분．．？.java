@@ -1,21 +1,27 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
 
-class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+public class Main {
 
-        int[] arr = new int[31];
+    static StringTokenizer st;
+    static int arr[][] = new int[30][30];
 
-        for(int i=1; i<=28; i++){
-            int s = sc.nextInt();
-            arr[s] = 1;
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        int arr[] = new int[31];
+        for (int i = 1; i <= 28; i++) {
+            int temp = Integer.parseInt(br.readLine());
+            arr[temp] = 1;
         }
-        for(int i=1; i<arr.length; i++){
-            if(arr[i] != 1){
-                System.out.println(i);
+        for (int i = 1; i <= 30; i++) {
+            if (arr[i] == 0) {
+                sb.append(i + "\n");
             }
         }
+        System.out.println(sb);
     }
+
 }
