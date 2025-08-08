@@ -1,10 +1,10 @@
-def is_group_word(word):
+def search(word):
     visited = set()
     before = ""
-
+    
     for char in word:
-        if char != before:
-            if char not in visited:
+        if(char != before):
+            if(char not in visited):
                 visited.add(char)
                 before = char
             else:
@@ -16,7 +16,7 @@ count = 0
 
 for _ in range(n):
     word = input()
-    if is_group_word(word):
-        count += 1
-
+    if search(word):
+        count +=1
+        
 print(count)
