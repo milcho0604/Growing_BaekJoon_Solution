@@ -1,20 +1,14 @@
 import sys
 
 input = sys.stdin.readline
+
 n = int(input())
 
-result = []
+arr = [0] * n
 
-for _ in range(n):
-    result.append(int(input()))
+for i in range(n):
+    arr[i] = int(input())
 
-result.sort()
-
-for i in result:
-    print(i)
-
-# for i in range(len(result)):
-    # print(result[i])
-    
-    # 만약 한 줄로 1 2 3 4 5와 같이 출력하고 싶다면 아래 end 추가
-    # print(result[i], end=' ')
+arr.sort()
+for char in arr:
+    print(char)
