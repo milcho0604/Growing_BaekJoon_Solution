@@ -11,18 +11,18 @@ public class Main {
         int a = Integer.parseInt(st.nextToken());
 
         int temp = 1;
-        int sum = 0;
+        int result = 0;
 
         for (int i = n.length() - 1; i >= 0; i--) {
             char c = n.charAt(i);
 
             if ('A' <= c && c <= 'Z') {
-                sum += (c - 'A' + 10) * temp;
+                result += (c - 'A' + 10) * temp;
             } else {
-                sum += (c - '0') * temp;
+                result += (c - '0') * temp;
             }
             temp *= a;
         }
-        System.out.println(sum);
+        System.out.println(result);
     }
 }
